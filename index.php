@@ -51,7 +51,6 @@ if( !empty($_POST['btn_submit']) ) {
 		
 		// データベースに接続
 		$mysqli = new mysqli( DB_HOST, DB_USER, DB_PASS, DB_NAME);
-		mysqli_set_charset('utf8');
 		
 		// 接続エラーの確認
 		if( $mysqli->connect_errno ) {
@@ -59,7 +58,7 @@ if( !empty($_POST['btn_submit']) ) {
 		} else {
 
 			// 文字コード設定
-			$mysqli->set_charset('utf8');
+			$mysqli->set_charset('utf8mb4');
 			
 			// 書き込み日時を取得
 			$now_date = date("Y-m-d H:i:s");
@@ -86,7 +85,6 @@ if( !empty($_POST['btn_submit']) ) {
 
 // データベースに接続
 $mysqli = new mysqli( DB_HOST, DB_USER, DB_PASS, DB_NAME);
-mysqli_set_charset('utf8');
 
 // 接続エラーの確認
 if( $mysqli->connect_errno ) {
