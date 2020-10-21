@@ -5,6 +5,7 @@ define( 'DB_HOST', 'us-cdbr-east-02.cleardb.com');
 define( 'DB_USER', 'be96b3e314479f');
 define( 'DB_PASS', '9979147b');
 define( 'DB_NAME', 'heroku_f4a0f651ae45c36');
+$conn->set_charset('utf8');
 
 // 変数の初期化
 $csv_data = null;
