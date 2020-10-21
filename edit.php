@@ -24,7 +24,7 @@ session_start();
 if( empty($_SESSION['admin_login']) || $_SESSION['admin_login'] !== true ) {
 	
 	// ログインページへリダイレクト
-	header("Location: ./admin.php");
+	// header("Location: ./admin.php");
 }
 
 if( !empty($_GET['message_id']) && empty($_POST['message_id']) ) {
