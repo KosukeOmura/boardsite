@@ -153,3 +153,5 @@ if( $mysqli->connect_errno ) {
 </section>
 </body>
 </html>
+
+DirectoryIndex index.php index.html
