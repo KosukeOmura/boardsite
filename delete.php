@@ -33,7 +33,8 @@ if( !empty($_GET['message_id']) && empty($_POST['message_id']) ) {
 	$message_id = (int)htmlspecialchars($_GET['message_id'], ENT_QUOTES);
 
 	// データベースに接続
-	$mysqli = new mysqli( DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    $mysqli = new mysqli( DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    mysql_query('SET NAMES utf8', $mysqli ); 
 	
 	// 接続エラーの確認
 	if( $mysqli->connect_errno ) {
@@ -60,6 +61,7 @@ if( !empty($_GET['message_id']) && empty($_POST['message_id']) ) {
     
     //データベースに接続
     $mysqli = new mysqli( DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    mysql_query('SET NAMES utf8', $mysqli ); 
 
     //接続エラーの確認
     if( $mysqli->connect_errno) {
