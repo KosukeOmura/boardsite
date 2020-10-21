@@ -100,11 +100,11 @@ if( !empty($_GET['message_id']) && empty($_POST['message_id']) ) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ひと言掲示板　管理ページ(投稿の編集)</title>
+    <title>ひと言掲示板 管理ページ(投稿の編集)</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<h1>ひと言掲示板　管理ページ(投稿の編集)</h1>
+<h1>ひと言掲示板 管理ページ(投稿の編集)</h1>
 
 <?php if( !empty($error_message) ): ?>
     <ul class="error_message">
