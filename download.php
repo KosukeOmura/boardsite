@@ -63,6 +63,7 @@ if( !empty($_SESSION['admin_login']) && $_SESSION['admin_login'] === true ) {
         }
 
         $mysqli->close();
+    
     }
 
     // CSVデータを作成

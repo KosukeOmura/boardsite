@@ -6,10 +6,14 @@ ini_set( 'display_errors', 1 );
 ini_set('error_reporting', E_ALL);
 
 // データベースの接続情報
-define( 'DB_HOST', 'us-cdbr-east-02.cleardb.com');
-define( 'DB_USER', 'be96b3e314479f');
-define( 'DB_PASS', '9979147b');
-define( 'DB_NAME', 'heroku_f4a0f651ae45c36');
+// define( 'DB_HOST', 'us-cdbr-east-02.cleardb.com');
+// define( 'DB_USER', 'be96b3e314479f');
+// define( 'DB_PASS', '9979147b');
+// define( 'DB_NAME', 'heroku_f4a0f651ae45c36');
+define( 'DB_HOST', 'localhost');
+define( 'DB_USER', 'kosuke');
+define( 'DB_PASS', 'komazawataxidesu');
+define( 'DB_NAME', 'board');
 
 
 // タイムゾーン設定
@@ -58,7 +62,7 @@ if( !empty($_POST['btn_submit']) ) {
 		} else {
 
 			// 文字コード設定
-			$mysqli->set_charset('utf8mb4');
+			$mysqli->set_charset('utf8');
 			
 			// 書き込み日時を取得
 			$now_date = date("Y-m-d H:i:s");
