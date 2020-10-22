@@ -115,6 +115,21 @@ if( $mysqli->connect_errno ) {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<?php
+		session_regenerate_id(true);
+		if(isset($_SESSION['login'])==false) {
+			echo 'ログインできません';
+			echo '<a href="../login/top_login.html">ログイン画面へ</a>';
+			exit();
+		}else {
+	
+			echo $_SESSION['login_name'];
+			echo 'さんログイン中 <br />';
+			echo '<br />';
+		}
+	
+	?>
+
 <h1>ひと言掲示板</h1>
 <?php if( empty($_POST['btn_submit']) && !empty($_SESSION['success_message']) ): ?>
 	<p class="success_message"><?php echo $_SESSION['success_message']; ?></p>
