@@ -116,7 +116,7 @@ if( $mysqli->connect_errno ) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>ひと言掲示板</h1>
