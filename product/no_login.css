@@ -1,0 +1,15 @@
+.noti_login {
+    cursor: pointer;
+    background: #f7f7f7;
+    max-width:100%;
+    width:100vw;
+    height: auto;
+    font-family: 'ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+}
+.noti_text {
+    margin-left:34vw;
+    margin-top:34vh;
+}
+.noti {
+    font-size:18px;
+}

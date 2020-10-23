@@ -28,20 +28,20 @@ try {
     //エラーをスロー
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-	$login_code=$_POST['code'];
+	$login_name=$_POST['name'];
 	$login_pass=$_POST['pass'];
 
 
 
-	$login_code=htmlspecialchars($login_code,ENT_QUOTES,'UTF-8');
+	$login_name=htmlspecialchars($login_name,ENT_QUOTES,'UTF-8');
 	$login_pass=htmlspecialchars($login_pass,ENT_QUOTES,'UTF-8');
 
 	$login_pass = md5($login_pass);
 
 
-	$sql='SELECT name FROM  usersd WHERE code=? AND password=?';
+	$sql='SELECT code FROM  usersd WHERE name=? AND password=?';
 	$stmt = $db->prepare($sql);
-	$data[] = $login_code;
+	$data[] = $login_name;
 	$data[] = $login_pass;
 	$stmt->execute($data);
 
@@ -55,8 +55,8 @@ try {
 	} else {
 		session_start();
 		$_SESSION['login']=1;
-		$_SESSION['login_code']=$login_code;
-		$_SESSION['login_name']=$rec['name'];
+		$_SESSION['login_name']=$login_name;
+		$_SESSION['login_code']=$rec['code'];
 		header('Location:../product/index.php');
 		exit();
 	}

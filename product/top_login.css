@@ -1,0 +1,46 @@
+body {
+    max-width:100%;
+    padding-right: 50px;
+    padding-left: 50px;
+    color: #222;
+	background: #f7f7f7;
+}
+
+
+/* ログインが出来ている場合 */
+.login_box {
+    cursor: pointer;
+    position: fixed;
+    top:0;
+    left: 86vw;
+    z-index:0;
+    background: #f7f7f7;
+    max-width:100%;
+    width:100vw;
+    height: auto;
+    font-family: 'ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+}
+
+.login_box h1 {
+    color:rgb(0, 0, 0);
+    margin-top:20px;
+    height: auto;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.login_box h1:hover {
+    color:rgb(119, 116, 116);
+}
+
+.logout_contents {
+    font-size: 12px;
+    display: none;
+
+    background: #f7f7f7;
+  }
+  .logout_contents.active {
+    display: block;
+  }
+
+

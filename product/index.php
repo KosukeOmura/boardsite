@@ -111,61 +111,87 @@ if( $mysqli->connect_errno ) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+	<title>Document</title>
+	<!-- 入力部分css -->
+	<link rel="stylesheet" href="twwet_form.css">
+	<!-- ログイン名部分css -->
+	<link rel="stylesheet" href="top_login.css">
+	<!-- ツイート一覧部分css -->
+	<link rel="stylesheet" href="keizivan.css">
+	<!-- ログイン必要画面 -->
+	<link rel="stylesheet" href="no_login.css">
+	
 </head>
 <body>
-	<?php
-		session_regenerate_id(true);
-		if(isset($_SESSION['login'])==false) {
-			echo 'ログインできません';
-			echo '<a href="../login/top_login.html">ログイン画面へ</a>';
-			exit();
-		}else {
-	
-			echo $_SESSION['login_name'];
-			echo 'さんログイン中 <br />';
-			echo '<br />';
-		}
-	
-	?>
+		<?php
+			session_regenerate_id(true);
+			if(isset($_SESSION['login'])==false) {
+		?>
+		<?php	
+			echo '掲示板利用にはログインが必要です。';
 
-<h1>ひと言掲示板</h1>
-<?php if( empty($_POST['btn_submit']) && !empty($_SESSION['success_message']) ): ?>
-	<p class="success_message"><?php echo $_SESSION['success_message']; ?></p>
-	<?php unset($_SESSION['success_message']); ?>
-<?php endif; ?>
-<?php if( !empty($error_message) ): ?>
-    <ul class="error_message">
-		<?php foreach( $error_message as $value ): ?>
-            <li>・<?php echo $value; ?></li>
-		<?php endforeach; ?>
-    </ul>
-<?php endif; ?>
-<form method="post">
-	<div>
-		<label for="view_name">表示名</label>
-		<input id="view_name" type="text" name="view_name" value="<?php if( !empty($_SESSION['view_name']) ){ echo $_SESSION['view_name']; } ?>">
+			header("Location: ../login/top_login.html");
+			exit();
+
+			}else {
+		?>
+	<div class="login_box">
+		<div class="logout_switch">
+			<h1>
+				<?php
+					echo $_SESSION['login_name'];
+					echo 'さんログイン中 <br />';
+				}
+				?>
+			</h1>
+		</div>
+		<div class="logout_contents">
+			<a href="../logout/logout.php">ログアウト</a>
+		</div>
 	</div>
-	<div>
-		<label for="message">ひと言メッセージ</label>
-		<textarea id="message" name="message"></textarea>
+
+	<div class="main_tweet_form">
+		<h1>掲示板</h1>
+		<?php if( empty($_POST['btn_submit']) && !empty($_SESSION['success_message']) ): ?>
+			<p class="success_message"><?php echo $_SESSION['success_message']; ?></p>
+			<?php unset($_SESSION['success_message']); ?>
+		<?php endif; ?>
+		<?php if( !empty($error_message) ): ?>
+			<ul class="error_message">
+				<?php foreach( $error_message as $value ): ?>
+					<li>・<?php echo $value; ?></li>
+				<?php endforeach; ?>
+			</ul>
+		<?php endif; ?>
+		<form method="post">
+			<div>
+				<label for="view_name">表示名</label>
+				<input id="view_name" type="text" name="view_name" value="<?php if( !empty($_SESSION['view_name']) ){ echo $_SESSION['view_name']; } ?>">
+			</div>
+			<div>
+				<label for="message">ひと言メッセージ</label>
+				<textarea id="message" name="message"></textarea>
+			</div>
+			<input type="submit" name="btn_submit" value="書き込む">
+		</form>
 	</div>
-	<input type="submit" name="btn_submit" value="書き込む">
-</form>
-<hr>
-<section>
-<?php if( !empty($message_array) ){ ?>
-<?php foreach( $message_array as $value ){ ?>
-<article>
-    <div class="info">
-        <h2><?php echo $value['view_name']; ?></h2>
-        <time><?php echo date('Y年m月d日 H:i', strtotime($value['post_date'])); ?></time>
-    </div>
-    <p><?php echo $value['message']; ?></p>
-</article>
-<?php } ?>
-<?php } ?>
-</section>
+		<hr>
+		<section>
+			<?php if( !empty($message_array) ){ ?>
+			<?php foreach( $message_array as $value ){ ?>
+			<article>
+				<div class="info">
+					<h2><?php echo $value['view_name']; ?></h2>
+					<time><?php echo date('Y年m月d日 H:i', strtotime($value['post_date'])); ?></time>
+				</div>
+				<p><?php echo $value['message']; ?></p>
+			</article>
+			<?php } ?>
+			<?php } ?>
+		</section>
+
+
+		<!-- アコーディオン -->
+        <script src="accordion.js"></script>
 </body>
 </html>

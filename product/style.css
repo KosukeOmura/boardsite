@@ -100,7 +100,8 @@ input, select {
 Common Style
 ------------------------------*/
 body {
-	padding: 50px;
+	padding-right: 50px;
+	padding-left: 50px;
 	font-size: 100%;
 	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
 	color: #222;

@@ -1,0 +1,65 @@
+body {
+    max-width:100%;
+    height:auto;
+    padding-right: 50px;
+    padding-left: 50px;
+    color: #222;
+	background: #f7f7f7;
+}
+
+.new_user_box {
+    margin-left:30vw;
+}
+
+.name_touroku {
+	margin-bottom: 20px;
+	padding: 10px;
+	font-size: 86%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background: #fff;
+}
+
+.pass_touroku{
+    margin-bottom: 20px;
+	padding: 10px;
+	font-size: 86%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background: #fff;
+} 
+
+.pass_check {
+    margin-bottom: 20px;
+	padding: 10px;
+	font-size: 86%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background: #fff;
+}
+
+input[type="submit"]{
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 86%;
+    line-height: 1.0em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #37a1e5;
+}
+
+input[type="button"]{
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 86%;
+    line-height: 1.0em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #37a1e5;
+}
