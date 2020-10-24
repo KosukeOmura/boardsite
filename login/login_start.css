@@ -10,12 +10,18 @@ body {
 p {
     margin: 0;
 }
-
-.login_start_box {
-    margin-top:10vh;
-    margin-left: 34vw;
+/* タイトル */
+h1{
+    font-size:30px;
 }
 
+/* メイン全体の位置 */
+.login_start_box {
+    margin-top:10vh;
+    margin-left: 42%;
+}
+
+/* ログインネーム */
 .login_code {
 	padding: 10px;
 	font-size: 86%;
@@ -24,6 +30,7 @@ p {
     background: #fff;
 }
 
+/* ログインパスワード */
 .login_password{
 	padding: 10px;
 	font-size: 86%;
@@ -33,7 +40,7 @@ p {
 } 
 
 
-
+/* OK戻るボタン */
 .click_box {
     margin-top:4vh;
 }
@@ -64,7 +71,7 @@ input[type="button"]{
     background-color: #37a1e5;
 }
 
-
+/* 初めての方はこちらリンク */
 a{
     margin-top:1vh;
     position: relative;
@@ -105,4 +112,68 @@ a{
 @keyframes blink {
     0% {opacity: 0.5; color:rgb(14, 73, 201);}
     100% {opacity: 1;}
+}
+
+
+
+
+/* スマホ */
+
+@media (max-width: 580px) {
+    
+    /* タイトル */
+    h1{
+        font-size:26px;
+    }
+    /* メイン全体の位置 */
+    .login_start_box {
+        margin-left: 28%;
+    }
+
+    /* ログインネーム */
+    .login_code {
+        padding: 10px;
+        font-size: 83%;
+        margin-bottom:10px;
+    }
+
+    input[type="submit"]{
+        display:block;
+        appearance: none;
+        -webkit-appearance: none;
+        padding: 16px 72px;
+        color: #fff;
+        font-size: 86%;
+        line-height: 1.0em;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #37a1e5;
+    }
+    
+    input[type="button"]{
+        margin-top:3vh;
+        appearance: none;
+        -webkit-appearance: none;
+        padding: 16px 68px;
+        color: #fff;
+        font-size: 86%;
+        line-height: 1.0em;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #37a1e5;
+    }
+
+    /* OK戻るボタン */
+    .click_box {
+        margin-top:4vh;
+    }
+
+    /* 初めての方はこちらリンク */
+    a{
+        margin-top:3vh;
+        margin-left:2vw;
+    }
+
 }

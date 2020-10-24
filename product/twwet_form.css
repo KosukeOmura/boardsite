@@ -8,7 +8,8 @@
 }
 
 .main_tweet_form h1 {
-	margin-bottom: 30px;
+    margin-bottom: 30px;
+    margin-top:100px;
     font-size: 100%;
     color: #222;
     text-align: center;
@@ -119,4 +120,18 @@ hr {
 .error_message li {
     font-size: 86%;
     line-height: 1.6em;
+}
+
+
+
+
+/* スマホ */
+
+@media (max-width: 580px) {
+
+    input[type="submit"] {
+        padding: 10px 40%;
+    }
+
+
 }

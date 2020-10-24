@@ -1,16 +1,22 @@
 body {
     max-width:100%;
     height:auto;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
     color: #222;
 	background: #f7f7f7;
 }
 
+p {
+    margin:0;
+}
+
+/* メイン位置 */
 .new_user_box {
     margin-left:30vw;
 }
 
+/* 名前部分 */
 .name_touroku {
 	margin-bottom: 20px;
 	padding: 10px;
@@ -20,6 +26,7 @@ body {
     background: #fff;
 }
 
+/* パスワード部分 */
 .pass_touroku{
     margin-bottom: 20px;
 	padding: 10px;
@@ -29,6 +36,7 @@ body {
     background: #fff;
 } 
 
+/* パスワードチェック部分 */
 .pass_check {
     margin-bottom: 20px;
 	padding: 10px;
@@ -38,6 +46,8 @@ body {
     background: #fff;
 }
 
+
+/* ボタン部分 */
 input[type="submit"]{
     appearance: none;
     -webkit-appearance: none;
@@ -49,6 +59,7 @@ input[type="submit"]{
     border: none;
     border-radius: 5px;
     background-color: #37a1e5;
+    
 }
 
 input[type="button"]{
@@ -62,4 +73,50 @@ input[type="button"]{
     border: none;
     border-radius: 5px;
     background-color: #37a1e5;
+}
+
+
+
+/* スマホ */
+
+@media (max-width: 580px) {
+
+        /* タイトル */
+        h1{
+            font-size:22px;
+        }
+
+        /* メイン位置 */
+        .new_user_box {
+            margin-left:18vw;
+        }
+
+    /* ボタン */
+    input[type="submit"]{
+        display:block;
+        appearance: none;
+        -webkit-appearance: none;
+        padding: 16px 72px;
+        color: #fff;
+        font-size: 86%;
+        line-height: 1.0em;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #37a1e5;
+    }
+    
+    input[type="button"]{
+        margin-top:3vh;
+        appearance: none;
+        -webkit-appearance: none;
+        padding: 16px 72px;
+        color: #fff;
+        font-size: 86%;
+        line-height: 1.0em;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #37a1e5;
+    }
 }

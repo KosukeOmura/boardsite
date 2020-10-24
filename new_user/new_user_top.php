@@ -13,19 +13,19 @@
 
 <div class="new_user_box">
 
-    新規ユーザー登録画面 <br>
-    <br />
+    <h1>新規ユーザー登録画面</h1>
+
     <form method="post" action="user_add_check.php" enctype="multipart/form-data">
 
-    お名前を入力してください。<br/>
-    <input type="text" name="name" style="width:200px" class="name_touroku"> <br />
-    パスワードを入力してください<br />
-    <input type="password" name="password" style="width:50px" class="pass_touroku"> <br />
-    パスワードをもう１度入力してください。<br />
-    <input type="password" name="pass2" style="width:400px" class="pass_check"><br />
+    <p>お名前を入力してください。</p>
+    <input type="text" name="name" class="name_touroku">
+    <p>パスワードを入力してください</p>
+    <input type="password" name="password" class="pass_touroku">
+    <p>パスワードをもう１度入力してください。</p>
+    <input type="password" name="pass2" class="pass_check">
     <br />
-    <input type="button" onclick="history.back()" value="戻る" >
     <input type="submit" value="OK">
+    <input type="button" onclick="history.back()" value="戻る" >
 
     </form>
 </div>

@@ -55,8 +55,8 @@
 				print '<input type="hidden" name="name" value="'.$login_name.'">';
 				print '<input type="hidden" name="password" value="'.$login_pass.'">';
 				print '<br />';
-				print '<input type="button" onclick="history.back()" value="戻る">';
 				print '<input type="submit" value="ＯＫ">';
+				print '<input type="button" onclick="history.back()" value="戻る">';
 				print '</form>';
 			}
 

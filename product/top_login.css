@@ -12,7 +12,7 @@ body {
     cursor: pointer;
     position: fixed;
     top:0;
-    left: 86vw;
+    right: 20px;
     z-index:0;
     background: #f7f7f7;
     max-width:100%;
@@ -26,6 +26,7 @@ body {
     margin-top:20px;
     height: auto;
     font-size:14px;
+    text-align:right;
     transition:0.3s;
 }
 
@@ -36,11 +37,67 @@ body {
 .logout_contents {
     font-size: 12px;
     display: none;
-
-    background: #f7f7f7;
   }
   .logout_contents.active {
     display: block;
+    cursor: pointer;
   }
 
 
+  /* 初めての方はこちらリンク */
+  .logout_contents a{
+      font-size:14px;
+    margin-top:1vh;
+    position: relative;
+    display: inline-block;
+    transition: .3s;
+    text-decoration:none;
+    margin-left:90%;
+    color:#000;
+
+    -webkit-animation:blink 1.0s ease-in-out infinite alternate;
+    -moz-animation:blink 1.0s ease-in-out infinite alternate;
+    animation:blink 1.0s ease-in-out infinite alternate;
+  }
+  
+  a::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #31aae2;
+    transition: .3s;
+    transform: translateX(-50%);
+  }
+  
+  a:hover::after{
+    width: 100%;
+  }
+
+  @-webkit-keyframes blink {
+    0% {opacity: 0.5; color:rgb(8, 60, 173);}
+    100% {opacity: 1;}
+}
+@-moz-keyframes blink {
+    0% {opacity: 0.5; color:rgb(16, 75, 204);}
+    100% {opacity: 1;}
+}
+@keyframes blink {
+    0% {opacity: 0.5; color:rgb(14, 73, 201);}
+    100% {opacity: 1;}
+}
+
+
+
+
+  /* スマホ */
+
+@media (max-width: 580px) {
+
+    
+
+
+
+}
